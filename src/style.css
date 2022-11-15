@@ -116,3 +116,50 @@ main .toDoList li {
   margin-bottom: 8px;
   padding: 8px 12px;
 }
+
+main .toDoList li .itemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 95%;
+}
+
+main .toDoList li .fa-trash-alt {
+  display: none;
+}
+
+main .toDoList li .fas {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main .toDoList li .fas:hover {
+  transform: scale(1.5);
+}
+
+main .toDoList li .box {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: red;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+main .toDoList li .box:checked {
+  background-color: green;
+}
+
+main .toDoList li label {
+  font-size: 1.2rem;
+  width: 90%;
+  padding: 2px 8px;
+  outline-color: #c3b7db;
+  color: #fff;
+  word-wrap: break-word;
+  text-align: justify;
+}
