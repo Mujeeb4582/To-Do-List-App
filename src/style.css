@@ -38,3 +38,13 @@ header {
   background-color: #fff;
   color: #524797;
 }
+
+header .fa-rotate {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+header .fa-rotate:hover {
+  transition: 1.5s;
+  transform: rotate(360deg);
+}
