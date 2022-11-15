@@ -68,3 +68,13 @@ main #form {
   padding: 2px;
   margin-bottom: 30px;
 }
+
+main #form .toDoInput {
+  font-size: 1rem;
+  padding: 8px;
+  border: none;
+  background-color: #fff;
+  width: 100%;
+  outline-color: #524797;
+  border-radius: 6px;
+}
