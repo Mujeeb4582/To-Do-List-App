@@ -10,6 +10,10 @@ const toDoList = document.querySelector('.toDoList');
 let itemList = [];
 
 // functions --------------
+const storeData = () => {
+  localStorage.setItem('data', JSON.stringify(itemList));
+};
+
 const clearInputField = () => {
   form.toDoTitle.value = '';
 };
@@ -38,6 +42,7 @@ form.addEventListener('submit', e => {
     const indexNumber = itemList.length + 1;
     const itemInfo = new ItemDetails(item, indexNumber);
     itemList.push(itemInfo);
+    storeData();
     clearInputField();
   }
 });
