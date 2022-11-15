@@ -1,6 +1,12 @@
+import ItemDetails from './modules/object.js';
+
 // grab the elements
 const form = document.querySelector('#form');
 const toDoList = document.querySelector('.toDoList');
+
+// declear and empty array to store objects
+// eslint-disable-next-line prefer-const
+let itemList = [];
 
 // functions --------------
 const clearInputField = () => {
@@ -27,5 +33,10 @@ form.addEventListener('submit', e => {
       msg.style.display = 'none';
       clearInputField();
     }, 2500);
+  } else {
+    const indexNumber = itemList.length + 1;
+    const itemInfo = new ItemDetails(item, indexNumber);
+    itemList.push(itemInfo);
+    clearInputField();
   }
 });
