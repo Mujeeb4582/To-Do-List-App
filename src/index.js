@@ -9,6 +9,7 @@ import {
 const form = document.querySelector('#form');
 const toDoList = document.querySelector('.toDoList');
 const clearTask = document.querySelector('.clearTask');
+const rotateIcon = document.querySelector('.fa-rotate');
 
 // eslint-disable-next-line prefer-const, import/no-mutable-exports
 let itemList = [];
@@ -117,6 +118,11 @@ clearTask.addEventListener('click', () => {
   refresh();
 });
 
+// refresh the browser when click on rotate Icon
+rotateIcon.addEventListener('click', () => {
+  refresh();
+});
+
 // add event listenser to the form
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -145,5 +151,4 @@ form.addEventListener('submit', (e) => {
     clearInputField();
   }
 });
-
 export { storeData, itemList };
