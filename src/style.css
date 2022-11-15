@@ -24,3 +24,17 @@ body {
   padding: 40px;
   border-radius: 12px;
 }
+
+
+header {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 0 12px #c3b7db;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 24px;
+  background-color: #fff;
+  color: #524797;
+}
