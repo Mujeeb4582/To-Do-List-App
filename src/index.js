@@ -1,12 +1,13 @@
 import './style.css';
 import ItemDetails from './modules/object.js';
+// eslint-disable-next-line import/no-cycle
+import CRUD from './modules/CRUD.js';
 
-// grab the elements
+// grab the element
 const form = document.querySelector('#form');
-const toDoList = document.querySelector('.toDoList');
 
 // declear and empty array to store objects
-// eslint-disable-next-line prefer-const
+// eslint-disable-next-line prefer-const, import/no-mutable-exports
 let itemList = [];
 
 // functions --------------
@@ -17,10 +18,27 @@ const storeData = () => {
 const clearInputField = () => {
   form.toDoTitle.value = '';
 };
+
+const renderItem = (dataList) => {
+  dataList.forEach((element, index) => {
+    CRUD(element.item, index);
+  });
+};
+
+const getStoreData = () => {
+  const getData = localStorage.getItem('data');
+  if (getData) {
+    const previousData = JSON.parse(getData);
+    itemList = previousData;
+    renderItem(previousData);
+  }
+};
 // ------------------------
 
+getStoreData();
+
 // add event listenser to the form
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const item = form.toDoTitle.value.trim();
@@ -42,7 +60,10 @@ form.addEventListener('submit', e => {
     const indexNumber = itemList.length + 1;
     const itemInfo = new ItemDetails(item, indexNumber);
     itemList.push(itemInfo);
+    CRUD(item, itemList.length - 1);
     storeData();
     clearInputField();
   }
 });
+
+export { storeData, itemList };
