@@ -23,13 +23,6 @@ const deleteItem = (indexValue) => {
   refresh();
 };
 
-const clearCompleted = () => {
-  itemList = itemList.filter((item) => item.completed === false);
-  updateIndex();
-  storeData();
-  refresh();
-};
-
 export {
-  updateListField, deleteItem, refresh, clearCompleted,
+  updateListField, deleteItem, refresh, updateIndex,
 };
