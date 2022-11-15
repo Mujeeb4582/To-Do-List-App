@@ -48,3 +48,12 @@ header .fa-rotate:hover {
   transition: 1.5s;
   transform: rotate(360deg);
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 20px;
+}
