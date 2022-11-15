@@ -57,3 +57,14 @@ main {
   width: 80%;
   margin-top: 20px;
 }
+
+main #form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 0 12px #c3b7db;
+  border-radius: 8px;
+  padding: 2px;
+  margin-bottom: 30px;
+}
