@@ -1,5 +1,6 @@
+/* eslint-disable import/no-cycle */
 import { storeData, itemList } from '../index.js';
-import { updateListField, deleteItem, refresh } from './functions.js';
+import { updateListField, deleteItem } from './functions.js';
 
 const toDoList = document.querySelector('.toDoList');
 
@@ -64,15 +65,12 @@ const CRUD = (newItem, indexNum) => {
   listInput.addEventListener('keyup', (e) => {
     if ((e.target.id === 'description')) {
       updateListField(e.target, indexNum);
-      storeData();
     }
   });
 
   trashIcon.addEventListener('click', (el) => {
     el.target.parentElement.remove();
     deleteItem(indexNum);
-    storeData();
-    refresh();
   });
 };
 
