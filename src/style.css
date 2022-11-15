@@ -78,3 +78,9 @@ main #form .toDoInput {
   outline-color: #524797;
   border-radius: 6px;
 }
+
+main #form .addToDo {
+  background-color: #fff;
+  border: none;
+  padding: 4px 8px;
+}
