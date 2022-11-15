@@ -13,5 +13,14 @@
     <h1 class="heading">Today's ToDo</h1>
     <i class="fa-solid fa-rotate" onclick="refresh()"></i>
   </header>
+  <main>
+    <form action="" id="form">
+      <input class="toDoInput" type="text" name="toDoTitle" placeholder="Add to your list..." required>
+      <button type="submit" class="addToDo"><i class="fa-solid fa-circle-plus"></i></button>
+    </form>
+    <ul class="toDoList"></ul>
+    <button onclick="clearCompleted()" type="submit" class="clearTask">Clear all completed</button>
+</div>
+  </main>
 </body>
 </html>
