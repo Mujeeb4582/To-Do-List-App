@@ -1,6 +1,6 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet) ![HTML](https://img.shields.io/badge/-HTML-orange) ![CSS](https://img.shields.io/badge/-CSS-blue) ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)
 
-# List-of-to-do-task
+# To-DO-App
 A website that lets you add list of to do task. It uses local-storage to store the data.
 
 ## Getting Started
