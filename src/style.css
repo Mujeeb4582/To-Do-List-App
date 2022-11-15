@@ -97,3 +97,12 @@ main #form .addToDo .fa-circle-plus:hover {
   transition: ease-out 1s;
   transform: scale(1.5);
 }
+
+main .toDoList {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
