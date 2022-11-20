@@ -4,7 +4,7 @@
 A website that lets you add list of to do task. It uses local-storage to store the data.
 
 ## Display
-<img src="./img/List-of-to-do.gif" width="800" height="300" />
+<img src="./img/List-of-to-do.gif" width="800" height="500" />
 
 ## Getting Started
 To get a local copy up and running follow these simple steps.
