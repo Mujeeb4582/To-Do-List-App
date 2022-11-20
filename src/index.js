@@ -5,13 +5,13 @@ import {
 } from './modules/functions.js';
 import storeData from './modules/localStorage.js';
 
-// grab the element
+// grab the elements
 const form = document.querySelector('#form');
 const toDoList = document.querySelector('.toDoList');
 const clearTask = document.querySelector('.clearTask');
 const rotateIcon = document.querySelector('.fa-rotate');
 
-// eslint-disable-next-line prefer-const, import/no-mutable-exports
+// eslint-disable-next-line prefer-const
 let itemList = [];
 
 const clearInputField = () => {
