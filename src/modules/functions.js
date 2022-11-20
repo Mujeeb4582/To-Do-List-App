@@ -1,25 +1,24 @@
-// eslint-disable-next-line import/no-cycle
-import { itemList, storeData } from '../index.js';
+import storeData from './localStorage.js';
 
 const refresh = () => {
   window.location.reload();
 };
 
-const updateIndex = () => {
+const updateIndex = (itemList) => {
   itemList.forEach((element, index) => {
     element.index = index + 1;
   });
 };
 
-const updateListField = (field, index) => {
+const updateListField = (itemList, field, index) => {
   itemList[index].item = field.textContent;
-  storeData();
+  storeData(itemList);
 };
 
-const deleteItem = (indexValue) => {
+const deleteItem = (itemList, indexValue) => {
   itemList.splice(indexValue, 1);
-  updateIndex();
-  storeData();
+  updateIndex(itemList);
+  storeData(itemList);
   refresh();
 };
 
