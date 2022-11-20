@@ -1,9 +1,9 @@
 import './style.css';
 import ItemDetails from './modules/object.js';
-// eslint-disable-next-line import/no-cycle
 import {
   updateListField, deleteItem, updateIndex, refresh,
 } from './modules/functions.js';
+import storeData from './modules/localStorage.js';
 
 // grab the element
 const form = document.querySelector('#form');
@@ -13,11 +13,6 @@ const rotateIcon = document.querySelector('.fa-rotate');
 
 // eslint-disable-next-line prefer-const, import/no-mutable-exports
 let itemList = [];
-
-// functions --------------
-const storeData = () => {
-  localStorage.setItem('data', JSON.stringify(itemList));
-};
 
 const clearInputField = () => {
   form.toDoTitle.value = '';
@@ -60,11 +55,11 @@ const CRUD = (newItem, indexNum) => {
       listInput.style.textDecorationColor = '#000';
       listInput.style.textDecorationThickness = '4px';
       itemList[indexNum].completed = true;
-      storeData();
+      storeData(itemList);
     } else {
       itemList[indexNum].completed = false;
       listInput.style.textDecoration = 'none';
-      storeData();
+      storeData(itemList);
     }
   });
 
@@ -83,13 +78,13 @@ const CRUD = (newItem, indexNum) => {
 
   listInput.addEventListener('keyup', (e) => {
     if ((e.target.id === 'description')) {
-      updateListField(e.target, indexNum);
+      updateListField(itemList, e.target, indexNum);
     }
   });
 
   trashIcon.addEventListener('click', (el) => {
     el.target.parentElement.remove();
-    deleteItem(indexNum);
+    deleteItem(itemList, indexNum);
   });
 };
 
@@ -113,8 +108,8 @@ getStoreData();
 // clear all task which are completed
 clearTask.addEventListener('click', () => {
   itemList = itemList.filter((item) => item.completed === false);
-  updateIndex();
-  storeData();
+  updateIndex(itemList);
+  storeData(itemList);
   refresh();
 });
 
@@ -147,8 +142,7 @@ form.addEventListener('submit', (e) => {
     const itemInfo = new ItemDetails(item, indexNumber);
     itemList.push(itemInfo);
     CRUD(item, itemList.length - 1);
-    storeData();
+    storeData(itemList);
     clearInputField();
   }
 });
-export { storeData, itemList };
