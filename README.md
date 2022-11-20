@@ -13,9 +13,9 @@ To get a local copy up and running follow these simple steps.
 ### Setup
 - Clone the GitHub Repository
 - run this commands in your terminal:
-     - `npm install`
-     - `npm run build`
-     - `npm start`
+    - `npm install`
+    - `npm run build`
+    - `npm start`
 
 ### Usage
   After running `npm start` the website will be opened automatically on your default browser.
@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple steps.
 - **Webpack:** used as a bundle to compile JavaScript modules.
 
 ## 🌎 Live Demo:
-- [Live Demo Link](https://mujeeb4582.github.io/List-of-to-do-task/dist/)
+- [Live Demo Link]()
 
 ## Authors 
 ### 👤 **Mujeeb ur Rahman**
