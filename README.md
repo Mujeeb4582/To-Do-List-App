@@ -1,7 +1,7 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet) ![HTML](https://img.shields.io/badge/-HTML-orange) ![CSS](https://img.shields.io/badge/-CSS-blue) ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow) ![Webpack](https://img.shields.io/badge/-Webpack-green)
 
 # To-DO-App
-A website that lets you add list of to do task. It uses local-storage to store the data.
+A website that lets you add list of to do task that helps you to organize your day. It lists the tasks that you need to do and allows you to mark them as complete. It uses local-storage to store the data. It was built as an introduction to web dev using ES6 and Webpack."
 
 ## Display
 <img src="./img/List-of-to-do.gif" width="800" height="500" />
